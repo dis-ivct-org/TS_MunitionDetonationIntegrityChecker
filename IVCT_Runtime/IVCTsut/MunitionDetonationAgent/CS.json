@@ -1,0 +1,13 @@
+{
+  "id": "MunitionDetonationAgent",
+  "name": "MunitionDetonationAgent",
+  "description": "MunitionDetonationAgent system under federate for IVCT demonstration",
+  "vendor": "OODA Technologies / DRDC Atlantics",
+  "badge": [
+    "TS_MunitionDetonationIntegrityChecker"
+  ],
+  "settingsDesignator": "",
+  "sutFederateName": "MunitionDetonationAgent",
+  "federationName": "IVCT_Federation",
+  "version": "0.1"
+}

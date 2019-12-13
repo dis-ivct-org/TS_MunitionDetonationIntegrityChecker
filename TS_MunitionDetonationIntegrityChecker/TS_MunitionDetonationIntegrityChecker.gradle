@@ -1,0 +1,21 @@
+apply plugin: 'application'
+
+mainClassName = 'ca.drdc.ivct.tc_mdintegritycheck.MunitionDetonationIntegrityTC_0001'
+
+dependencies {
+    compileOnly    group: 'org.apache.commons',    name: 'commons-math', version: '2.2'
+    compileOnly    group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    compileOnly    libraries.tc_lib
+    compileOnly    group: 'io.github.msg134', name: 'MessagingHelpers', version: ivctVersion
+
+    compileOnly    libraries.slf4j_api
+    compileOnly    libraries.logback_classic
+    compileOnly    libraries.logback_core
+    compileOnly    libraries.slf4j_jcl_over_slf4j
+    compileOnly    libraries.slf4j_jul_to_slf4j
+    compileOnly    libraries.slf4j_log4j_over_slf4j
+
+    compile        libraries.grim_rpr_fom
+    compile        libraries.hla_coders
+}

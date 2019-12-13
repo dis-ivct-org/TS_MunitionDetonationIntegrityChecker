@@ -1,0 +1,60 @@
+{
+  "federationName" : "IVCT_Federation",
+  "rtiHostName" : "127.0.0.1",
+  "rtiPort" : "8989",
+  "sutFederateName" : "MunitionDetonationAgent",
+  "thresholds": {
+    "worldLocation": 0.001,
+    "orientation": 0.0001,
+    "velocity": 0.001,
+    "acceleration": 0.001,
+    "angularVelocity": 0.0001
+  },
+  "waitingPeriod": 10,
+  "fadFile" :  [
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts01.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts02.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts03.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts04.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts05.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts06.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts07.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts08.csv"
+    },
+    {
+      "fileName": "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/testcases/MD0001_Parts09.csv"
+    }
+  ],
+  "fomFiles"        : [
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Aggregate_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Base_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Communication_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-DER_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Logistics_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Minefield_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Physical_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-SE_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-SIMAN_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Switches_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-UA_v2.0.xml"},
+    { "fileName"    : "$(IVCT_SUT_HOME_ID)/MunitionDetonationAgent/resources/fom/RPR-Warfare_v2.0.xml"}
+  ]
+}

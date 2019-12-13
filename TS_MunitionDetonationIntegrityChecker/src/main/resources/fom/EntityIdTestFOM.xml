@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" xmlns="http://standards.ieee.org/IEEE1516-2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelIdentification>
+        <name>Entity Identifier Test FOM</name>
+        <type>FOM</type>
+        <version>1.0</version>
+        <modificationDate>2016-02-29</modificationDate>
+        <securityClassification>Unclassified</securityClassification>
+        <purpose>DRDC IVCT Test FOM</purpose>
+        <applicationDomain>Engineering</applicationDomain>
+        <description>FOM for the Getting Started with HLA Evolved kit.</description>
+        <useLimitation>None</useLimitation>
+        <poc>
+            <pocType>Primary author</pocType>
+            <pocName>Jaff Guo</pocName>
+            <pocOrg>CAE Defence and Security</pocOrg>
+            <pocTelephone>+1 613 247 0342</pocTelephone>
+            <pocEmail>jaff.guo@cae.com</pocEmail>
+        </poc>
+        <poc>
+            <pocType>Contributor</pocType>
+            <pocName>Evan Harris</pocName>
+            <pocOrg>CAE Defence and Security</pocOrg>
+            <pocTelephone>+1 613 247 0342</pocTelephone>
+            <pocEmail>info@cae.com</pocEmail>
+        </poc>
+        <reference>
+            <type>Document</type>
+            <identification>The CORA 200(Feb 2016)</identification>
+        </reference>
+        <other></other>
+        <glyph/>
+    </modelIdentification>
+    <objects>
+        <objectClass>
+            <name>HLAobjectRoot</name>
+ 			<objectClass>
+                <name>EntityInfo</name>
+                <sharing>PublishSubscribe</sharing>
+                <semantics>An entity info for the IVCT test federation</semantics>
+                <attribute>
+                    <name>IndexString</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Index of the EntityInfo</semantics>
+                </attribute>
+                <attribute>
+                    <name>EntityIdentifierRecord</name>
+                    <dataType>EntityIdentifierStruct</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Dotted entity identifier structure.</semantics>
+                </attribute>
+                <attribute>
+                    <name>EntityDotTypeString</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Entity type string</semantics>
+                </attribute>
+                <attribute>
+                    <name>DescriptionString</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Description of the EntityInfo.</semantics>
+                </attribute>
+            </objectClass>
+         </objectClass>
+    </objects>
+    <interactions>
+        <interactionClass>
+            <name>HLAinteractionRoot</name>
+            <interactionClass>
+                <name>PerformTestcase</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to set up the testcase</semantics>
+                <parameter>
+                    <name>TestcaseName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Test case file for the test</semantics>
+                </parameter>
+                <parameter>
+                    <name>TimeScaleFactor</name>
+                    <dataType>ScaleFactorFloat32</dataType>
+                    <semantics>How fast will the simulation run compared to real time. Example: 1.0= real time, 2.0 indicates that the simulation runs at twice the speed. </semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>LoadTestcase</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to set up the testcase</semantics>
+                <parameter>
+                    <name>TestcaseName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Test case file for the test</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>TestcaseLoaded</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>This interaction confirms that the test case has been loaded</semantics>
+                <parameter>
+                    <name>FederateName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Name of the federate that succeeded in loading the test case</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>TestcaseLoadFailure</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>To be sent by a federate that has failed to load a test case for some reason</semantics>
+                <parameter>
+                    <name>FederateName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Name of the federate that failed with loading the test case</semantics>
+                </parameter>
+                <parameter>
+                    <name>ErrorMessage</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Explanation of failure</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>Start</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to Start the simulation</semantics>
+                <parameter>
+                    <name>TimeScaleFactor</name>
+                    <dataType>ScaleFactorFloat32</dataType>
+                    <semantics>How fast will the simulation run compared to real time. Example: 1.0= real time, 2.0 indicates that the simulation runs at twice the speed. </semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>Stop</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to Stop the simulation</semantics>
+            </interactionClass>
+            <interactionClass>
+                <name>EntityIdsDone</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>All entity identifiers updated</semantics>
+                <parameter>
+                    <name>FederateName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Name of the federate that succeeded in updating entity ids</semantics>
+                </parameter>
+            </interactionClass>
+        </interactionClass>
+    </interactions>
+    <switches>
+        <autoProvide isEnabled="true"/>
+        <conveyRegionDesignatorSets isEnabled="false"/>
+        <conveyProducingFederate isEnabled="false"/>
+        <attributeScopeAdvisory isEnabled="false"/>
+        <attributeRelevanceAdvisory isEnabled="false"/>
+        <objectClassRelevanceAdvisory isEnabled="false"/>
+        <interactionRelevanceAdvisory isEnabled="false"></interactionRelevanceAdvisory>
+        <serviceReporting isEnabled="false"/>
+        <exceptionReporting isEnabled="false"/>
+        <delaySubscriptionEvaluation isEnabled="false"/>
+        <automaticResignAction resignAction="CancelThenDeleteThenDivest"/>
+    </switches>
+    <dataTypes>
+        <simpleDataTypes>
+            <simpleData>
+                <name>ScaleFactorFloat32</name>
+                <representation>HLAfloat32BE</representation>
+                <units>NA</units>
+                <resolution>0.001</resolution>
+                <accuracy>0.001</accuracy>
+                <semantics>time scale</semantics>
+            </simpleData>
+        </simpleDataTypes>
+        <enumeratedDataTypes/>
+        <arrayDataTypes/>
+        <fixedRecordDataTypes>
+            <fixedRecordData>
+                <name>EntityIdentifierStruct</name>
+                <encoding>HLAfixedRecord</encoding>
+                <semantics>Entity Identifier structure.</semantics>
+                <field>
+                    <name>SiteID</name>
+                    <dataType>HLAinteger16BE</dataType>
+                    <semantics>unsigned short</semantics>
+                </field>
+                <field>
+                    <name>ApplicationID</name>
+                    <dataType>HLAinteger16BE</dataType>
+                    <semantics>unsigned short</semantics>
+                </field>
+                <field>
+                    <name>EntityNumber</name>
+                    <dataType>HLAinteger16BE</dataType>
+                    <semantics>unsigned short</semantics>
+                </field>
+            </fixedRecordData>
+        </fixedRecordDataTypes>
+        <variantRecordDataTypes/>
+    </dataTypes>
+    <notes>
+        <note>
+            <label>Extenability</label>
+            <semantics>This FOM can be extended by adding more objects and interactions</semantics>
+        </note>
+    </notes>
+</objectModel>
