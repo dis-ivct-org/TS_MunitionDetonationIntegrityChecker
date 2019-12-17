@@ -1,0 +1,17 @@
+{
+	"id" 			: 	"TS_DisMunitionDetonationIntegrityChecker",
+	"version"		:	"1.0.1",
+	"name" 			: 	"TS_DisMunitionDetonationIntegrityChecker",
+	"description"	:	"This is a test to verify the integrity of weapon fires injected in the federation by a SUT.",
+	"graphics"		:	"/some/icon.png",
+	"tsRunTimeFolder": "TS_DisMunitionDetonationIntegrityChecker-1.0.1/bin",
+	"tsLibTimeFolder": "TS_DisMunitionDetonationIntegrityChecker-1.0.1/lib",
+    "dependency"	:	[],
+	"requirements"	:	[
+		{
+			"id"			:	"DisMunitionDetonationIntegrityCheckerTC_0001",
+			"description"	:	"Dis Munition Detonation Integrity Tester for identity match",
+			"TC"			:	"ca.drdc.ivct.tc_md_integritycheck.DisMunitionDetonationIntegrityCheckerTC_0001"
+		}
+	]
+}

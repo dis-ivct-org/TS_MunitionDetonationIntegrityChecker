@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'ca.drdc.ivct.dis.DisMunitionSut'
+
+dependencies {
+    compileOnly libraries.slf4j_api
+    compileOnly libraries.jsonSimple
+
+    runtime		libraries.logback_classic
+    runtime		libraries.logback_core
+
+    compile files ("/opt/openDis/open-dis_4.16.jar")
+    compile files ("/opt/openDis/dis-enums_1.1.jar")
+    compile    group: 'io.github.ivctool', name: 'IVCT_DIS_plugin', version: "${modelEncoderVersion}"
+    compileOnly    group: 'io.github.ivctool', name: 'MessagingHelpers', version: "${ivctVersion}"
+    compile    group: 'io.github.ivctool', name: 'GrimRprFom', version: "${modelEncoderVersion}"
+}

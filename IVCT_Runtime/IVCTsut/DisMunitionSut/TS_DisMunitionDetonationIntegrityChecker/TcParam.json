@@ -1,0 +1,27 @@
+{
+  "federationName": "IVCT_DIS_Federation",
+  "sutHostName": "192.168.48.27",
+  "sutPort": "3001",
+  "listeningPort": "3001",
+  "thresholds": {
+    "worldLocation": 0.001,
+    "orientation": 0.0001,
+    "velocity": 0.001,
+    "acceleration": 0.001,
+    "angularVelocity": 0.0001
+  },
+  "waitingPeriod": 10,
+  "fadFiles" :  [
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts01.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts02.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts03.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts04.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts05.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts06.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts07.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts08.csv" },
+    { "fileName": "$(IVCT_SUT_HOME_ID)/DisMunitionSut/TS_DisMunitionDetonationIntegrityChecker/resources/testcases/MD0001_Parts09.csv" }
+  ]
+}
+

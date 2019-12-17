@@ -9,17 +9,18 @@ ext {
     gradleWrapperVersion = "${gradleVersion}"
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~ IVCT settings
-    ivctVersion = '2.1.1'
+    ivctVersion = '2.2.0'
 
     modelEncoderVersion = "1.0.0"
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~ MunitionDetonationIntegrityChecker settings
-    TS_MunitionDetonationIntegrityCheckerVersion = '1.0.1'
+    TS_DisMunitionDetonationIntegrityCheckerVersion = '1.0.1'
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~ testing
     junitVersion = '4.+'
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~ thirdparty
+    jsonSimpleVersion = '1.1.1'
     logbackVersion = '1.1.3'
     slf4jVersion = '1.7.10'
 
@@ -32,6 +33,7 @@ ext {
             hla_coders          : "io.github.ivctool:HLACoders:${modelEncoderVersion}",
 
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~ thirdparty
+            jsonSimple          : "com.googlecode.json-simple:json-simple:${jsonSimpleVersion}",
             logback_classic     : "ch.qos.logback:logback-classic:${logbackVersion}",
             logback_core        : "ch.qos.logback:logback-core:${logbackVersion}",
 

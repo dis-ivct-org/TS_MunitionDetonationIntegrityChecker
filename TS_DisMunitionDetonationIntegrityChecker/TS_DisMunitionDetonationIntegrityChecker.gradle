@@ -1,0 +1,24 @@
+apply plugin: 'application'
+
+mainClassName = 'ca.drdc.ivct.tc_mdintegritycheck.DisMunitionDetonationIntegrityTC_0001'
+
+dependencies {
+
+    compile files ("/opt/openDis/open-dis_4.16.jar")
+    compile files ("/opt/openDis/dis-enums_1.1.jar")
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+
+    compile        group: 'io.github.ivctool', name: 'IVCT_DIS_plugin', version: "${modelEncoderVersion}"
+    compileOnly    group: 'io.github.msg134',  name: 'TC.lib', version: "${ivctVersion}"
+    compileOnly    group: 'io.github.ivctool', name: 'MessagingHelpers', version: "${ivctVersion}"
+
+    compileOnly    libraries.slf4j_api
+    compileOnly    libraries.logback_classic
+    compileOnly    libraries.logback_core
+    compileOnly    libraries.slf4j_jcl_over_slf4j
+    compileOnly    libraries.slf4j_jul_to_slf4j
+    compileOnly    libraries.slf4j_log4j_over_slf4j
+
+    compile libraries.grim_rpr_fom
+    compile libraries.hla_coders
+}

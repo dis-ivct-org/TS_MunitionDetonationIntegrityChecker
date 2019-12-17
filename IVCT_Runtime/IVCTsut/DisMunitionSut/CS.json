@@ -1,0 +1,11 @@
+{
+	"id" 			: 	"DisMunitionSut",
+	"name"			:	"DisMunitionSut",
+	"description"	:	"DisMunition system for DIS IVCT",
+	"vendor"		:	"OODA Technologies / DRDC Atlantics",
+	"badge"			:	["TS_DisMunitionDetonationIntegrityChecker"],
+	"settingsDesignator": "",
+	"sutFederateName": "DisMunitionSut",
+	"federationName": "IVCT_DIS_Federation",
+	"version": "0.1"
+}
